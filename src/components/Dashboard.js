@@ -353,11 +353,11 @@ export default function Dashboard({ session }) {
           <div className="lg:col-span-2 space-y-6">
             {filteredTransactions.filter(t => t.type === 'expense').length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-zinc-900/40 backdrop-blur-md p-5 rounded-2xl border border-zinc-800/80">
+                <div className="bg-zinc-900/40 backdrop-blur-md p-5 rounded-2xl border border-zinc-800/80" style={{ height: '280px', display: 'flex', flexDirection: 'column' }}>
                   <h3 className="text-[9px] font-black uppercase tracking-widest text-zinc-500 mb-4">Berdsr. Kategori</h3>
-                  <div className="h-44">
+                  <div style={{ flex: 1, minHeight: 0, width: '100%', overflow: 'hidden' }}>
                     {isMounted && (
-                      <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+                      <ResponsiveContainer width="100%" height={220}>
                         <PieChart>
                           <Pie data={categoryChartData} innerRadius={35} outerRadius={50} paddingAngle={4} dataKey="value" stroke="none">
                             {categoryChartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
@@ -369,11 +369,11 @@ export default function Dashboard({ session }) {
                     )}
                   </div>
                 </div>
-                <div className="bg-zinc-900/40 backdrop-blur-md p-5 rounded-2xl border border-zinc-800/80">
+                <div className="bg-zinc-900/40 backdrop-blur-md p-5 rounded-2xl border border-zinc-800/80" style={{ height: '280px', display: 'flex', flexDirection: 'column' }}>
                   <h3 className="text-[9px] font-black uppercase tracking-widest text-zinc-500 mb-4">Cash vs Digital</h3>
-                  <div className="h-44">
+                  <div style={{ flex: 1, minHeight: 0, width: '100%', overflow: 'hidden' }}>
                     {isMounted && (
-                      <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+                      <ResponsiveContainer width="100%" height={220}>
                         <PieChart>
                           <Pie data={methodChartData} innerRadius={35} outerRadius={50} paddingAngle={4} dataKey="value" stroke="none">
                             {methodChartData.map((_, i) => <Cell key={i} fill={COLORS[(i + 2) % COLORS.length]} />)}
