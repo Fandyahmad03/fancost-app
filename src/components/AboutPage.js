@@ -74,7 +74,7 @@ export default function AboutPage({ onClose }) {
           
           {/* SILAKAN GANTI KONTEN PROFIL KAMU DI SINI */}
           <div>
-            <h2 className="text-xl md:text-2xl font-black text-white">NAMA KAMU DISINI</h2>
+            <h2 className="text-xl md:text-2xl font-black text-white">FANDY AHMAD</h2>
             <p className="text-xs md:text-sm text-cyan-400 font-medium mt-1">Frontend Developer / Software Engineer</p>
           </div>
           
